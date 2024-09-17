@@ -1,2 +1,5 @@
 application\Main.class
+controller\GeradorController.class
+utils\Salvar.class
+utils\GerarTodasCombinacoes.class
 controller\MainController.class
