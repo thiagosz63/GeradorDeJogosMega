@@ -14,7 +14,7 @@ public class MainController implements Initializable{
 
 	private @FXML Button btnStart;
 	private @FXML AnchorPane AncorPaneGerador;
-	private @FXML AnchorPane AncorPaneVisualizador;
+	private @FXML AnchorPane AncorPaneBuscar;
 	
 	private synchronized <T> void loadView(String absoluteName, AnchorPane anchorPanePai, Consumer<T> initializingAction) {
 		try {
@@ -38,8 +38,10 @@ public class MainController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-		loadView("/view/geradorView.fxml",AncorPaneGerador, (x) -> {
-			
+		loadView("/view/GeradorView.fxml",AncorPaneGerador, (x) -> {
+		});
+		
+		loadView("/view/BuscarView.fxml",AncorPaneBuscar, (x) -> {
 		});
 		
 	}

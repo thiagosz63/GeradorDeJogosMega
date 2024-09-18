@@ -1,5 +1,6 @@
+controller\BuscarController.class
 application\Main.class
+utils\Caminho.class
 controller\GeradorController.class
-utils\Salvar.class
 utils\GerarTodasCombinacoes.class
 controller\MainController.class

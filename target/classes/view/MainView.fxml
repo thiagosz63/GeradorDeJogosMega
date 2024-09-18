@@ -5,9 +5,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0"
-	prefWidth="671.0" xmlns="http://javafx.com/javafx/21"
-	xmlns:fx="http://javafx.com/fxml/1"
+	 prefHeight="488.0" prefWidth="671.0"
+	xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="controller.MainController">
 	<children>
 		<TabPane layoutX="212.0" layoutY="85.0" prefHeight="200.0"
@@ -15,15 +14,15 @@
 			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
 			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<tabs>
-				<Tab text="Gerador">
+				<Tab text="Gerador de Jogos">
 					<content>
 						<AnchorPane fx:id="AncorPaneGerador" minHeight="0.0"
 							minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
 					</content>
 				</Tab>
-				<Tab text="Visualizador">
+				<Tab text="Buscar Premiação">
 					<content>
-						<AnchorPane fx:id="AncorPaneVisualizador"
+						<AnchorPane fx:id="AncorPaneBuscar"
 							minHeight="0.0" minWidth="0.0" prefHeight="180.0"
 							prefWidth="200.0" />
 					</content>

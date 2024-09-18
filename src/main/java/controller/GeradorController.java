@@ -1,22 +1,26 @@
 package controller;
 
-import java.util.List;
-
-import utils.GerarTodasCombinacoes;
-import utils.Salvar;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 
 public class GeradorController {
 
 	String input = "C:\\Users\\TSA\\Desktop\\gerar-combinacoes";
-	
-	public void onBtnStart() {
-		// Entrada.
-		String[] numeros = new String[] { "01", "04", "12", "14", "24", "26",
-				"36", "34", "48", "54", "58", "21", "41","56" };
-		int r = 6;
-		
-		List<String> listEntrada = GerarTodasCombinacoes.gerarTodasCombinacoes(numeros.length, r, numeros);
-		
-		Salvar.salvar(input + "TodasPossiveis.csv", listEntrada);
+	private @FXML TextField txtJogo;
+	private @FXML TextField txtDigitosPorJogo;
+	private @FXML TextField txtValordoJogo;
+	private @FXML ComboBox cbFiltro;
+	private @FXML Button btnIniciar;
+
+	@FXML
+	private void onActionIniciar(ActionEvent event) {
+		System.out.println("clkicou");
+	}
+
+	@FXML
+	private void onActionSalvar(ActionEvent event) {
 	}
 }
