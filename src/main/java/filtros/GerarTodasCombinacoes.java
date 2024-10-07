@@ -1,4 +1,4 @@
-package utils;
+package filtros;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,13 @@ public class GerarTodasCombinacoes {
 
 			String junta = "";
 			for (int i = 0; i < combinacao.length; i++) {
-				junta += combinacao[i]+",";
+				
+				if(i == combinacao.length-1) {
+					junta += combinacao[i];
+				}else {
+					junta += combinacao[i]+"-";
+				}
+				
 			}
 			saida.add(junta);
 		}

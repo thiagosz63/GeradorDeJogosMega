@@ -1,6 +1,8 @@
-C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega-tsa\src\main\java\application\Main.java
-C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega-tsa\src\main\java\controller\BuscarController.java
-C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega-tsa\src\main\java\controller\GeradorController.java
-C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega-tsa\src\main\java\controller\MainController.java
-C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega-tsa\src\main\java\utils\Caminho.java
-C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega-tsa\src\main\java\utils\GerarTodasCombinacoes.java
+C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega\src\main\java\application\Main.java
+C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega\src\main\java\controller\BuscarController.java
+C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega\src\main\java\controller\GeradorController.java
+C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega\src\main\java\controller\MainController.java
+C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega\src\main\java\filtros\GerarTodasCombinacoes.java
+C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega\src\main\java\filtros\TiraFamiliaComTres.java
+C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega\src\main\java\filtros\TiraSequenciaSeguida.java
+C:\Users\TSA\eclipse-workspace\GeradorDeJogosMega\src\main\java\utils\Caminho.java

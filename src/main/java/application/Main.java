@@ -21,6 +21,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setMinWidth(671);
 			primaryStage.setMinHeight(488);
+			primaryStage.setTitle("Gerador de jogos Mega Sena");
 			primaryStage.show();
 			
 		} catch (Exception e) {

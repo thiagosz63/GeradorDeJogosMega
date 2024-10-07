@@ -82,7 +82,7 @@ public class BuscarController {
 	}
 
 	public void pesquisar(String combinacao) {
-		String[] num = combinacao.split(Pattern.quote(","));
+		String[] num = combinacao.split(Pattern.quote("-"));
 
 		List<String> listaView1Bola = new ArrayList<>();
 		List<String> listaView2Bola = new ArrayList<>();

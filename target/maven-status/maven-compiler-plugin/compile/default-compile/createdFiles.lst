@@ -1,6 +1,8 @@
 controller\BuscarController.class
 application\Main.class
 utils\Caminho.class
+filtros\TiraFamiliaComTres.class
 controller\GeradorController.class
-utils\GerarTodasCombinacoes.class
+filtros\TiraSequenciaSeguida.class
 controller\MainController.class
+filtros\GerarTodasCombinacoes.class
