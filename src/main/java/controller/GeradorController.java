@@ -45,11 +45,8 @@ public class GeradorController implements Initializable {
 		ListViewJogos.setItems(ObsList);
 	}
 
-
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-
 	}
 
 	@FXML
@@ -59,11 +56,11 @@ public class GeradorController implements Initializable {
 
 		int r = Integer.parseInt(txtDigitosPorJogo.getText());
 		listSaida = GerarTodasCombinacoes.gerarTodasCombinacoes(numeros.length, r, numeros);
-		
-		if(rbSemNumeroSequenciado.isSelected()) {
+
+		if (rbSemNumeroSequenciado.isSelected()) {
 			listSaida = Filtro.tiraSequenciaSeguida(listSaida);
 		}
-		if(rbSemFamiliaComTres.isSelected()) {
+		if (rbSemFamiliaComTres.isSelected()) {
 			listSaida = Filtro.tiraSequenciaFamilia(listSaida);
 		}
 
@@ -71,11 +68,13 @@ public class GeradorController implements Initializable {
 		labelQntJogo.setText(numeros.length + " Números jogados");
 		labelQntCombinacoes.setText(listSaida.size() + " combinações de jogos");
 
-		double valorDoJogo = Double.parseDouble(txtValordoJogo.getText().replaceAll((","), (".")));
-		NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));
-		String resultadoFormatado = formatter.format(listSaida.size() * valorDoJogo);
+		if (!txtValordoJogo.getText().isBlank()) {
+			double valorDoJogo = Double.parseDouble(txtValordoJogo.getText().replaceAll((","), (".")));
+			NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));
+			String resultadoFormatado = formatter.format(listSaida.size() * valorDoJogo);
 
-		labelValorDoJogo.setText(resultadoFormatado + " Valor total do jogo");
+			labelValorDoJogo.setText(resultadoFormatado + " Valor total do jogo");
+		}
 	}
 
 	@FXML

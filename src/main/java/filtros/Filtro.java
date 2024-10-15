@@ -12,23 +12,23 @@ public class Filtro {
 		for (String input : listInput) {
 			String[] vet = input.split(Pattern.quote("-"));
 
-			boolean controledeSaida = true;
+			boolean resultado = true;
 			for (int j = 0; j < vet.length; j++) {
 				Integer num = Integer.parseInt(vet[j]);
 
 				for (int k = 0; k < vet.length - 1; k++) {
 					Integer numComparar = Integer.parseInt(vet[k + 1]);
 					if ((num + 1) == numComparar) {
-						controledeSaida = false;
+						resultado = false;
 						break;
 					}
 				}
 
-				if (controledeSaida == false) {
+				if (resultado == false) {
 					break;
 				}
 			}
-			if (controledeSaida == true) {
+			if (resultado == true) {
 				listOutput.add(input);
 			}
 		}
@@ -37,11 +37,11 @@ public class Filtro {
 
 	public static List<String> tiraSequenciaFamilia(List<String> listInput) {
 		List<String> listOutput = new ArrayList<String>();
-		boolean resultado = false;
 
 		for (String input : listInput) {
 			String[] vet = input.split(Pattern.quote("-"));
 
+			boolean resultado = false;
 			for (int j = 0; j < vet.length; j++) {
 				String posicao1Vetor = vet[j].substring(0, 1);
 
