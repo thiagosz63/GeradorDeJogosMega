@@ -93,7 +93,7 @@ public class BuscarController {
 
 		for (int j = 0; j < listInput.size(); j++) {
 
-			String[] vet = listInput.get(j).split(Pattern.quote(","));
+			String[] vet = listInput.get(j).split(Pattern.quote("-"));
 			Integer controler = 0;
 
 			for (int k = 0; k < num.length; k++) {

@@ -10,15 +10,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GeradorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="620.0" xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.GeradorController">
 	<children>
-		<VBox alignment="TOP_CENTER" layoutX="-4.0" layoutY="10.0" prefHeight="136.0" prefWidth="620.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+		<VBox alignment="TOP_CENTER" layoutX="-4.0" layoutY="10.0"
+			prefHeight="136.0" prefWidth="620.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
 			<children>
-				<HBox alignment="TOP_CENTER" prefHeight="62.0" prefWidth="622.0" spacing="15.0">
+				<HBox alignment="TOP_CENTER" prefHeight="62.0"
+					prefWidth="622.0" spacing="15.0">
 					<children>
 						<Label contentDisplay="BOTTOM" text="Jogo ex. 01-02-03">
 							<graphic>
-								<TextField fx:id="txtJogo" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="408.0" />
+								<TextField fx:id="txtJogo" alignment="TOP_LEFT"
+									onKeyReleased="#onKeyReleasedTxtJogo" prefHeight="25.0"
+									prefWidth="408.0" />
 							</graphic>
 							<HBox.margin>
 								<Insets />
@@ -26,39 +35,54 @@
 						</Label>
 						<Label contentDisplay="BOTTOM" text="Digitos por jogo">
 							<graphic>
-								<TextField fx:id="txtDigitosPorJogo" prefHeight="25.0" prefWidth="93.0" />
+								<TextField fx:id="txtDigitosPorJogo" prefHeight="25.0"
+									prefWidth="93.0" />
 							</graphic>
 						</Label>
 						<Label contentDisplay="BOTTOM" text="Valor por jogo">
 							<graphic>
-								<TextField fx:id="txtValordoJogo" prefHeight="25.0" prefWidth="74.0" />
+								<TextField fx:id="txtValordoJogo" prefHeight="25.0"
+									prefWidth="74.0" />
 							</graphic>
 						</Label>
 					</children>
 				</HBox>
-				<Label alignment="TOP_CENTER" contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="460.0" text="Gerar Combinações">
+				<Label alignment="TOP_CENTER" contentDisplay="BOTTOM"
+					prefHeight="62.0" prefWidth="460.0" text="Gerar Combinações">
 					<graphic>
-						<HBox alignment="CENTER" prefHeight="29.0" prefWidth="460.0" spacing="15.0">
+						<HBox alignment="CENTER" prefHeight="29.0" prefWidth="460.0"
+							spacing="15.0">
 							<children>
-								<RadioButton fx:id="rbSemNumeroSequenciado" mnemonicParsing="false" text="Sem número sequenciado" />
-								<RadioButton fx:id="rbSemFamiliaComTres" mnemonicParsing="false" text="Sem familia com 3" />
+								<RadioButton fx:id="rbSemNumeroSequenciado"
+									mnemonicParsing="false" text="Sem número sequenciado" />
+								<RadioButton fx:id="rbSemFamiliaComTres"
+									mnemonicParsing="false" text="Sem familia com 3" />
 							</children>
 						</HBox>
 					</graphic>
 				</Label>
 
-				<Button fx:id="btnIniciar" mnemonicParsing="false" onAction="#onActionIniciar" prefHeight="26.0" prefWidth="70.0" text="Iniciar" />
+				<Button fx:id="btnIniciar" mnemonicParsing="false"
+					onAction="#onActionIniciar" prefHeight="26.0" prefWidth="70.0"
+					text="Iniciar" />
 			</children>
 		</VBox>
 
-		<ListView fx:id="ListViewJogos" layoutX="-2.0" layoutY="152.8" prefHeight="189.0" prefWidth="620.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="153.0" />
+		<ListView fx:id="ListViewJogos" layoutX="-2.0"
+			layoutY="152.8" prefHeight="189.0" prefWidth="620.0"
+			AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="153.0" />
 
-		<HBox alignment="TOP_CENTER" layoutY="344.0" prefHeight="47.0" prefWidth="620.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+		<HBox alignment="TOP_CENTER" layoutY="344.0" prefHeight="47.0"
+			prefWidth="620.0" spacing="15.0" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 			<children>
 				<Label fx:id="labelQntJogo" text="QNT jogo" />
 				<Label fx:id="labelQntCombinacoes" text="QNT combinacoes" />
 				<Label fx:id="labelValorDoJogo" text="Valor do jogo" />
-				<Button fx:id="btnSalvarCombinacoes" mnemonicParsing="false" onAction="#onActionSalvar" prefHeight="26.0" prefWidth="73.0" text="Salvar" />
+				<Button fx:id="btnSalvarCombinacoes" mnemonicParsing="false"
+					onAction="#onActionSalvar" prefHeight="26.0" prefWidth="73.0"
+					text="Salvar" />
 			</children>
 		</HBox>
 

@@ -23,10 +23,12 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import utils.Caminho;
+import javafx.scene.input.KeyEvent;
 
 public class GeradorController implements Initializable {
 
 	private List<String> listSaida = new ArrayList<String>();
+	private String[] numeros;
 
 	private @FXML TextField txtJogo;
 	private @FXML TextField txtDigitosPorJogo;
@@ -47,12 +49,12 @@ public class GeradorController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		btnIniciar.disableProperty().bind(txtJogo.textProperty().isEmpty().or(txtDigitosPorJogo.textProperty().isEmpty()));
 	}
 
 	@FXML
 	private void onActionIniciar(ActionEvent event) {
 		// Entrada.
-		String[] numeros = txtJogo.getText().split(Pattern.quote("-"));
 
 		int r = Integer.parseInt(txtDigitosPorJogo.getText());
 		listSaida = GerarTodasCombinacoes.gerarTodasCombinacoes(numeros.length, r, numeros);
@@ -65,7 +67,6 @@ public class GeradorController implements Initializable {
 		}
 
 		preencrerLista(listSaida);
-		labelQntJogo.setText(numeros.length + " Números jogados");
 		labelQntCombinacoes.setText(listSaida.size() + " combinações de jogos");
 
 		if (!txtValordoJogo.getText().isBlank()) {
@@ -92,5 +93,10 @@ public class GeradorController implements Initializable {
 		} catch (Exception e) {
 			System.out.println("error" + e.getMessage());
 		}
+	}
+
+	@FXML public void onKeyReleasedTxtJogo(KeyEvent event) {
+		numeros = txtJogo.getText().split(Pattern.quote("-"));
+		labelQntJogo.setText(numeros.length + " Números jogados");
 	}
 }
