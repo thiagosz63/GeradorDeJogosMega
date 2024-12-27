@@ -57,6 +57,8 @@
 									mnemonicParsing="false" text="Sem número sequenciado" />
 								<RadioButton fx:id="rbSemFamiliaComTres"
 									mnemonicParsing="false" text="Sem familia com 3" />
+								<RadioButton fx:id="rbRestricaoPorCasa"
+									mnemonicParsing="false" text="Restrição por Casa" />
 							</children>
 						</HBox>
 					</graphic>

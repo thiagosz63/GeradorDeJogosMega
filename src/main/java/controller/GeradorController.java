@@ -41,6 +41,7 @@ public class GeradorController implements Initializable {
 	private @FXML Button btnSalvarCombinacoes;
 	private @FXML RadioButton rbSemNumeroSequenciado;
 	private @FXML RadioButton rbSemFamiliaComTres;
+	private @FXML RadioButton rbRestricaoPorCasa;
 
 	public void preencrerLista(List<String> list) {
 		ObservableList<String> ObsList = FXCollections.observableArrayList(list);
@@ -64,6 +65,9 @@ public class GeradorController implements Initializable {
 		}
 		if (rbSemFamiliaComTres.isSelected()) {
 			listSaida = Filtro.tiraSequenciaFamilia(listSaida);
+		}
+		if(rbRestricaoPorCasa.isSelected()) {
+			listSaida = Filtro.restricaoCasas(listSaida);
 		}
 
 		preencrerLista(listSaida);

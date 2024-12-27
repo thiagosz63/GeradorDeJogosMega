@@ -66,4 +66,67 @@ public class Filtro {
 		}
 		return listOutput;
 	}
+
+	public static List<String> restricaoCasas(List<String> listInput) {
+		List<String> listOutput = new ArrayList<String>();
+
+		for (String input : listInput) {
+			String[] vet = input.split(Pattern.quote("-"));
+
+			boolean resultado = false;
+			
+			for (int j = 0; j < vet.length; j++) {
+				
+				String posicao0Vetor = vet[0].substring(0, 1);
+				String posicao1Vetor = vet[1].substring(0, 1);
+				String posicao2Vetor = vet[2].substring(0, 1);
+				String posicao3Vetor = vet[3].substring(0, 1);
+				String posicao4Vetor = vet[4].substring(0, 1);
+				String posicao5Vetor = vet[5].substring(0, 1);
+
+					if ((posicao1Vetor.equals("0")) || (posicao2Vetor.equals("0"))
+							|| (posicao3Vetor.equals("0")) || (posicao4Vetor.equals("0"))
+							|| (posicao5Vetor.equals("0"))) {
+						resultado = true;
+					}
+					
+					if ((posicao3Vetor.equals("1")) || (posicao4Vetor.equals("1"))
+							|| (posicao5Vetor.equals("1"))) {
+						resultado = true;
+					}
+					
+					if ((posicao0Vetor.equals("2")) || (posicao4Vetor.equals("2"))
+							|| (posicao5Vetor.equals("2"))) {
+						resultado = true;
+					}
+					
+					if ((posicao0Vetor.equals("3")) || (posicao1Vetor.equals("3"))
+							|| (posicao5Vetor.equals("3"))) {
+						resultado = true;
+					}
+					
+					if ((posicao0Vetor.equals("4")) || (posicao1Vetor.equals("4"))
+							|| (posicao2Vetor.equals("4"))) {
+						resultado = true;
+					}
+					
+					if ((posicao0Vetor.equals("5")) || (posicao1Vetor.equals("5"))
+							|| (posicao2Vetor.equals("5")) || (posicao3Vetor.equals("5"))) {
+						resultado = true;
+					}
+					
+					if ((posicao0Vetor.equals("6")) || (posicao1Vetor.equals("6"))
+							|| (posicao2Vetor.equals("6")) || (posicao3Vetor.equals("6")) 
+							|| (posicao4Vetor.equals("6"))) {
+						resultado = true;
+					}
+					
+			}
+			
+			if (resultado == false) {
+				listOutput.add(input);
+			}
+		}
+		return listOutput;
+	}
 }
