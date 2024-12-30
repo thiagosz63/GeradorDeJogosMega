@@ -90,7 +90,7 @@ public class Filtro {
 						resultado = true;
 					}
 					
-					if ((posicao3Vetor.equals("1")) || (posicao4Vetor.equals("1"))
+					if ((posicao3Vetor.equals("1")) || (posicao4Vetor.equals("1")) || (posicao1Vetor.equals("1"))
 							|| (posicao5Vetor.equals("1"))) {
 						resultado = true;
 					}
@@ -111,7 +111,7 @@ public class Filtro {
 					}
 					
 					if ((posicao0Vetor.equals("5")) || (posicao1Vetor.equals("5"))
-							|| (posicao2Vetor.equals("5")) || (posicao3Vetor.equals("5"))) {
+							|| (posicao2Vetor.equals("5")) || (posicao3Vetor.equals("5")) || (posicao4Vetor.equals("5"))) {
 						resultado = true;
 					}
 					

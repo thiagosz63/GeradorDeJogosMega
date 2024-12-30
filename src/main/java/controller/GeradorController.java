@@ -89,6 +89,9 @@ public class GeradorController implements Initializable {
 
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
 
+			bw.write("Numeros Jogados: '" + txtJogo.getText() + "'");
+			bw.newLine();
+			
 			for (String string : listSaida) {
 
 				bw.write(string);
